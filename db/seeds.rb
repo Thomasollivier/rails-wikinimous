@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+# Creating 100 fake restaurants
+10.times do
+  article = Article.new(
+    title:    Faker::Zelda.game,
+    content:  Faker::Zelda.character
+
+  )
+  article.save!
+end
